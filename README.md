@@ -17,7 +17,7 @@ This project provides a focused test suite to validate a new C# BIP85 implementa
 Clone and run:
 
 ```bash
-git clone [https://github.com/Dimi8146/Bip85Lib](https://github.com/Dimi8146/Bip85Lib)
+git clone https://github.com/Dimi8146/Bip85Lib
 cd Bip85Lib
 dotnet restore
 dotnet run
