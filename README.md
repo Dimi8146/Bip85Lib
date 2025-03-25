@@ -1,6 +1,7 @@
 # Bip85Lib
 
 This project provides a focused test suite to validate a new C# BIP85 implementation against the [official BIP85 specification](https://github.com/bitcoin/bips/blob/master/bip-0085.mediawiki#test-vectors) utilizing the NBitcoin libraries.
+- ⚠️ Multilanguage support attempted.
 ---
 
 ## ✅ What It Covers
@@ -9,7 +10,6 @@ This project provides a focused test suite to validate a new C# BIP85 implementa
 - ✅ WIF derivation (App `2′`)
 - ✅ Extended Private Key (XPRV, App `32′`, BIP85 entropy layout: chain code + key)
 - ✅ Raw HEX entropy (App `128169′`, full 64 bytes, truncated to requested length)
-
 ---
 
 ## ▶️ Running the Tests
