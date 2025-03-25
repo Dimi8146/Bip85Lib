@@ -15,6 +15,19 @@ namespace Bip85Lib
         private readonly Network _network;
 
         private static readonly Dictionary<Language, Wordlist> CachedWordlists = new();
+	    private static readonly Dictionary<Language, int> LanguageIndexes = new()
+    	{
+    	    { Language.English, 0 },
+            { Language.Japanese, 1 },
+//nosupport { Language.Korean, 2 },
+            { Language.Spanish, 3 },
+            { Language.ChineseSimplified, 4 },
+            { Language.ChineseTraditional, 5 },
+            { Language.French, 6 },
+//nosupport { Language.Italian, 7 },
+            { Language.Czech, 8 },
+	    { Language.PortugueseBrazil, 9 },
+	};
 
         public Bip85(string xprv, Network network)
         {
@@ -63,7 +76,8 @@ namespace Bip85Lib
             };
 
             var wordlist = LoadWordlist(language);
-            var path = new KeyPath($"m/83696968'/39'/0'/{wordCount}'/{index}'");
+            var languageIndex = LanguageIndexes[language];
+            var path = new KeyPath($"m/83696968'/39'/{languageIndex}'/{wordCount}'/{index}'");
             var entropy = DeriveEntropyFromPath(path, entropyBits);
             return new Mnemonic(wordlist, entropy).ToString();
         }
