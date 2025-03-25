@@ -15,7 +15,7 @@ namespace Bip85Lib
         private readonly Network _network;
 
         private static readonly Dictionary<Language, Wordlist> CachedWordlists = new();
-	    private static readonly Dictionary<Language, int> LanguageIndexes = new()
+	private static readonly Dictionary<Language, int> LanguageIndexes = new()
     	{
     	    { Language.English, 0 },
             { Language.Japanese, 1 },
